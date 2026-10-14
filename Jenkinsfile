@@ -12,7 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                    python3 -m venv .jenkins-venv
+                    python3.11 -m venv .jenkins-venv
                     . .jenkins-venv/bin/activate
                     python -m pip install --upgrade pip
                     pip install -r requirements.txt
